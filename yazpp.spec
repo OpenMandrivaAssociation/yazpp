@@ -1,4 +1,4 @@
-%define	major	1
+%define	major 2
 %define libname %mklibname yazpp %{major}
 
 Summary:	YAZ++ is an application programming interface (API) to YAZ
@@ -70,15 +70,14 @@ make check
 #%defattr(644,root,root,755)
 
 %files -n %{libname}
-%defattr(644,root,root,755) 
-%attr(755,root,root) %{_libdir}/*.so.%{major}*
+%defattr(-,root,root) 
+%{_libdir}/*.so.%{major}*
 
 %files -n %{libname}-devel
-%defattr(644,root,root,755)
+%defattr(-,root,root)
 %doc README ChangeLog NEWS TODO LICENSE
-%multiarch %attr(755,root,root) %{multiarch_bindir}/%{name}-config
-#%attr(755,root,root) %{multiarch_bindir}/%{name}-config
-%attr(755,root,root) %{_bindir}/%{name}-config
+%{multiarch_bindir}/%{name}-config
+%{_bindir}/%{name}-config
 %dir %{_includedir}/%{name}
 %{_includedir}/%{name}/*
 %{_libdir}/*.so
