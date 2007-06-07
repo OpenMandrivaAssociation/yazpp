@@ -3,11 +3,11 @@
 
 Summary:	YAZ++ is an application programming interface (API) to YAZ
 Name:		yazpp
-Version:	1.0.0
+Version:	1.0.3
 Release:	%mkrel 1
 License:	BSD
 Group:		System/Libraries
-Source0:	http://ftp.indexdata.dk/pub/yaz++/%{name}-%{version}.tar.gz
+Source0:	http://ftp.indexdata.dk/pub/yaz++/%{name}-%{version}.tar.bz2
 Url:		http://www.indexdata.com/yazplusplus/
 BuildRequires:	libyaz-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -24,9 +24,6 @@ Provides:	%{libname} = %{version}-%{release}
 %description -n %{libname}
 Z39.50/SRW/SRU C++ libraries.
 
-%files -n %{libname}
-%defattr(644,root,root,755) 
-%attr(755,root,root) %{_libdir}/*.so.%{major}*
 
 %package -n %{libname}-devel
 Summary:	Yaz++ development headers (API)
@@ -43,21 +40,6 @@ both the client and server roles. YAZ++ includes an implementation of the
 ZOOM C++ binding and a generic client/server API based on the 
 Observer/Observable design pattern.
 
-%files -n %{libname}-devel
-%defattr(644,root,root,755)
-%doc README ChangeLog NEWS TODO LICENSE
-%multiarch %attr(755,root,root) %{multiarch_bindir}/%{name}-config
-#%attr(755,root,root) %{multiarch_bindir}/%{name}-config
-%attr(755,root,root) %{_bindir}/%{name}-config
-%dir %{_includedir}/%{name}
-%{_includedir}/%{name}/*
-%{_libdir}/*.so
-%{_libdir}/*.la
-%{_datadir}/aclocal/yazpp.m4
-%{_datadir}/doc/%{name}/*
-%{_mandir}/man8/yazpp-config.8.bz2
-   
-
 %prep
 %setup -q %{name}-%{version}
 
@@ -68,6 +50,9 @@ Observer/Observable design pattern.
 	--disable-static
 
 %make
+
+%check
+make check
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
@@ -84,4 +69,21 @@ Observer/Observable design pattern.
 #%files
 #%defattr(644,root,root,755)
 
+%files -n %{libname}
+%defattr(644,root,root,755) 
+%attr(755,root,root) %{_libdir}/*.so.%{major}*
 
+%files -n %{libname}-devel
+%defattr(644,root,root,755)
+%doc README ChangeLog NEWS TODO LICENSE
+%multiarch %attr(755,root,root) %{multiarch_bindir}/%{name}-config
+#%attr(755,root,root) %{multiarch_bindir}/%{name}-config
+%attr(755,root,root) %{_bindir}/%{name}-config
+%dir %{_includedir}/%{name}
+%{_includedir}/%{name}/*
+%{_libdir}/*.so
+%{_libdir}/*.la
+%{_datadir}/aclocal/yazpp.m4
+%{_datadir}/doc/%{name}/*
+%{_mandir}/man8/yazpp-config.8.bz2
+   
