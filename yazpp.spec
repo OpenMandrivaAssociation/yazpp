@@ -4,7 +4,7 @@
 Summary:	YAZ++ is an application programming interface (API) to YAZ
 Name:		yazpp
 Version:	1.0.3
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	BSD
 Group:		System/Libraries
 Source0:	http://ftp.indexdata.dk/pub/yaz++/%{name}-%{version}.tar.bz2
@@ -20,6 +20,7 @@ Summary:	Z39.50/SRW/SRU C++ libraries
 Group:		System/Libraries
 Provides:	lib%{name} = %{version}-%{release}
 Provides:	%{libname} = %{version}-%{release}
+Obsoletes:	%mklibname yazpp 1
 
 %description -n %{libname}
 Z39.50/SRW/SRU C++ libraries.
