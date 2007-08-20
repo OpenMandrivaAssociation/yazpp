@@ -87,5 +87,5 @@ make check
 %{_libdir}/*.la
 %{_datadir}/aclocal/yazpp.m4
 %{_datadir}/doc/%{name}/*
-%{_mandir}/man8/yazpp-config.8.bz2
+%{_mandir}/man8/yazpp-config.*
    
