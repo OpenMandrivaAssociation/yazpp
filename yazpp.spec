@@ -1,10 +1,11 @@
 %define	major 2
 %define libname %mklibname yazpp %{major}
+%define develname %mklibname yazpp -d
 
 Summary:	YAZ++ is an application programming interface (API) to YAZ
 Name:		yazpp
 Version:	1.0.3
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	BSD
 Group:		System/Libraries
 Source0:	http://ftp.indexdata.dk/pub/yaz++/%{name}-%{version}.tar.bz2
@@ -18,24 +19,20 @@ Yaz C++ bindings.
 %package -n %{libname}
 Summary:	Z39.50/SRW/SRU C++ libraries
 Group:		System/Libraries
-Provides:	lib%{name} = %{version}-%{release}
-Provides:	%{libname} = %{version}-%{release}
-Obsoletes:	%mklibname yazpp 1
 
 %description -n %{libname}
 Z39.50/SRW/SRU C++ libraries.
 
-
-%package -n %{libname}-devel
+%package -n %{develname}
 Summary:	Yaz++ development headers (API)
 Group:		Development/C++
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	lib%{name}-devel = %{version}-%{release}
-Obsoletes:	%mklibname yazpp -d 1
-Provides:	%mklibname yazpp -d 1
+Obsoletes:	%mklibname yazpp -d 2
+Provides:	%mklibname yazpp -d 2
 
-%description -n %{libname}-devel
+%description -n %{develname}
 YAZ++ is an application programming interface (API) to YAZ which supports 
 the development of Z39.50/SRW/SRU client and server applications using C++. 
 Like YAZ, it supports Z39.50-2003 (version 3) as well as SRW/SRU version 1.1 in 
@@ -44,7 +41,7 @@ ZOOM C++ binding and a generic client/server API based on the
 Observer/Observable design pattern.
 
 %prep
-%setup -q %{name}-%{version}
+%setup -q
 
 %build
 %configure2_5x \
@@ -69,14 +66,11 @@ make check
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
-#%files
-#%defattr(644,root,root,755)
-
 %files -n %{libname}
 %defattr(-,root,root) 
 %{_libdir}/*.so.%{major}*
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-,root,root)
 %doc README ChangeLog NEWS TODO LICENSE
 %{multiarch_bindir}/%{name}-config
