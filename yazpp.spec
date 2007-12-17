@@ -11,7 +11,6 @@ Group:		System/Libraries
 Source0:	http://ftp.indexdata.dk/pub/yaz++/%{name}-%{version}.tar.bz2
 Url:		http://www.indexdata.com/yazplusplus/
 BuildRequires:	libyaz-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Yaz C++ bindings.
