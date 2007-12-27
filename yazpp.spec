@@ -10,7 +10,9 @@ License:	BSD
 Group:		System/Libraries
 Source0:	http://ftp.indexdata.dk/pub/yaz++/%{name}-%{version}.tar.bz2
 Url:		http://www.indexdata.com/yazplusplus/
-BuildRequires:	libyaz-devel
+Patch0:		yazpp-1.0.4-config.patch
+BuildRequires:	libyaz-devel >= 3.0.18
+BuildRequires:	libicu-devel
 
 %description
 Yaz C++ bindings.
@@ -41,11 +43,11 @@ Observer/Observable design pattern.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_5x \
 	--enable-shared \
-	--with-pic \
 	--disable-static
 
 %make
