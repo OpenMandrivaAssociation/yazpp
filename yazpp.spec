@@ -5,7 +5,7 @@
 Summary:	YAZ++ is an application programming interface (API) to YAZ
 Name:		yazpp
 Version:	1.0.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	BSD
 Group:		System/Libraries
 Source0:	http://ftp.indexdata.dk/pub/yaz++/%{name}-%{version}.tar.bz2
@@ -13,6 +13,8 @@ Url:		http://www.indexdata.com/yazplusplus/
 Patch0:		yazpp-1.0.4-config.patch
 BuildRequires:	libyaz-devel >= 3.0.18
 BuildRequires:	libicu-devel
+BuildRequires:	docbook-style-dsssl
+BuildRequires:  docbook-style-xsl
 
 %description
 Yaz C++ bindings.
