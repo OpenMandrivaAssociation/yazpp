@@ -2,7 +2,7 @@
 %define libname %mklibname yazpp %{major}
 %define develname %mklibname yazpp -d
 
-Summary:	YAZ++ is an application programming interface (API) to YAZ
+Summary:	Application programming interface (API) to YAZ
 Name:		yazpp
 Version:	1.0.4
 Release:	%mkrel 2
