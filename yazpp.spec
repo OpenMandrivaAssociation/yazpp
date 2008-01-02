@@ -17,7 +17,7 @@ BuildRequires:	docbook-style-dsssl
 BuildRequires:  docbook-style-xsl
 
 %description
-Yaz C++ bindings.
+YAZ++ is an C++ binding to YAZ.
 
 %package -n %{libname}
 Summary:	Z39.50/SRW/SRU C++ libraries
