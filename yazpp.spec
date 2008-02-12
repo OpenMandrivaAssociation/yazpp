@@ -38,7 +38,7 @@ Provides:	%mklibname yazpp -d 2
 %description -n %{develname}
 YAZ++ is an application programming interface (API) to YAZ which supports 
 the development of Z39.50/SRW/SRU client and server applications using C++. 
-Like YAZ, it supports Z39.50-2003 (version 3) as well as SRW/SRU version 1.1 in 
+Like YAZ, it supports Z39.50-2003 (version 3) as well as SRW/SRU version 1.1 in
 both the client and server roles. YAZ++ includes an implementation of the 
 ZOOM C++ binding and a generic client/server API based on the 
 Observer/Observable design pattern.
