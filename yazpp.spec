@@ -8,6 +8,7 @@ Version:	1.0.4
 Release:	%mkrel 2
 License:	BSD
 Group:		System/Libraries
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0:	http://ftp.indexdata.dk/pub/yaz++/%{name}-%{version}.tar.bz2
 Url:		http://www.indexdata.com/yazplusplus/
 Patch0:		yazpp-1.0.4-config.patch
