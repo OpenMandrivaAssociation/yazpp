@@ -8,7 +8,7 @@ Version:	1.1.1
 Release:	%mkrel 2
 License:	BSD
 Group:		System/Libraries
-Url:		http://www.indexdata.com/yazplusplus/
+Url:		https://www.indexdata.com/yazplusplus/
 Source0:	http://ftp.indexdata.dk/pub/yaz++/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-1.1.1-config.patch
 BuildRequires:	libyaz-devel >= 3.0.18
