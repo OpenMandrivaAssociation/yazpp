@@ -35,7 +35,7 @@ Group:		Development/C++
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	lib%{name}-devel = %{version}-%{release}
-Obsoletes:      %{mklibname -d yazpp 2} < %{EVRD} 
+Obsoletes:      %{mklibname -d yazpp 2} < %{EVRD}
 Provides:	%mklibname yazpp -d 2
 
 %description -n %{develname}
