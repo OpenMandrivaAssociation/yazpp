@@ -5,7 +5,7 @@
 Summary:	Application programming interface (API) to YAZ
 Name:		yazpp
 Version:	1.1.1
-Release:	%mkrel 2
+Release:	3
 License:	BSD
 Group:		System/Libraries
 Url:		https://www.indexdata.com/yazplusplus/
