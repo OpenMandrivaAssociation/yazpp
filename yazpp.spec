@@ -34,7 +34,7 @@ Summary:	Yaz++ development headers (API)
 Group:		Development/C++
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
-Provides:	lib%{name}-devel = %{version}-%{release}
+Provides:	%{libname}-devel = %{version}-%{release}
 Obsoletes:      %{mklibname -d yazpp 2} < %{EVRD}
 Provides:	%mklibname yazpp -d 2
 
