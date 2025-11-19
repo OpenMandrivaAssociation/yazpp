@@ -16,6 +16,7 @@ BuildOption:   --enable-shared --disable-static
 
 BuildRequires:	pkgconfig(yaz) >= 3.0.18
 BuildRequires:	pkgconfig(icu-i18n)
+BuildRequires:  xsltproc
 BuildRequires:	docbook-style-dsssl
 BuildRequires:  docbook-style-xsl
 
