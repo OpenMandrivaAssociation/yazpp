@@ -4,12 +4,12 @@
 
 Summary:	Application programming interface (API) to YAZ
 Name:		yazpp
-Version:	1.9.0
+Version:	1.9.2
 Release:	1
 License:	BSD-3-Clause
 Group:		System/Libraries
 Url:		https://www.indexdata.com/yazplusplus/
-Source0:	https://download.indexdata.com/pub/yazpp/yazpp-1.9.0.tar.gz
+Source0:	https://download.indexdata.com/pub/yazpp/yazpp-1.9.2.tar.gz
 
 BuildSystem:    autotools
 BuildOption:   --enable-shared --disable-static
